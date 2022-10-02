@@ -3,6 +3,9 @@
     ttl: 60
     heap-size: 100
 
+server:
+  port: 8083
+
 ---
 spring:
   config:
@@ -20,8 +23,7 @@ spring:
       on-profile: docker
   zipkin:
     baseUrl: http://tracing-server:9411
-server:
-  port: 8083
+
 eureka:
   client:
     serviceUrl:
