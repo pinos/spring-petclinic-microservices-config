@@ -4,7 +4,8 @@ eureka:
   instance:
     # enable to register multiple app instances with a random server port
     instance-id: ${spring.application.name}:${random.uuid}
-
+server:
+  port: 8081
 ---
 spring:
   config:
@@ -12,8 +13,6 @@ spring:
       on-profile: docker
   zipkin:
     baseUrl: http://tracing-server:9411
-server:
-  port: 8081
 eureka:
   client:
     serviceUrl:
